@@ -14,6 +14,21 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+  let rowL = n + (n-1)
+  let middle = Math.floor(rowL/2)
+  let str = ""
+  for(let i = 0; i < n; i++){
+    for(let j = 0; j < rowL; j++){
+      if(j >= middle - i && j <= middle + i){
+        str+="#"
+      } else {
+        str+=" "
+      }
+    }
+    console.log(str)
+    str = ""
+  }
+}
 
 module.exports = pyramid;

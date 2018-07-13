@@ -17,6 +17,19 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n) {
+  let pound = ""
+  for(let i = 0; i < n; i++){
+    for(let j = 0; j < n; j++){
+      if(j <= i) {
+        pound+="#"
+      } else {
+        pound+=" "
+      }
+    }
+  console.log(pound)
+  pound = ""
+  }
+}
 
 module.exports = steps;
